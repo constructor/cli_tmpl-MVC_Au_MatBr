@@ -1,0 +1,25 @@
+<template>
+  <div class="row">
+    <div class="col s12">
+      <h4>${message}</h4>
+      <button md-button="disabled.bind: disabled;" click.trigger="showToast()">Toast</button>
+      <button md-button click.delegate="openModal()">Modal</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m12">
+        <div id="modal1" md-modal md-modal.ref="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis sem feugiat, malesuada tortor vel, dictum mauris. 
+            Cras facilisis egestas ligula non commodo. Fusce sed velit dapibus, lacinia nunc et, iaculis tortor. Aliquam mollis risus eu 
+            purus volutpat, et aliquam sapien facilisis. Vestibulum a arcu felis.</p>
+          </div>
+          <div class="modal-footer">
+            <a click.delegate="agree()" md-button="flat: true;" md-waves="color: accent;" class="modal-action modal-close">Agree</a>
+            <a click.delegate="disagree()" md-button="flat: true;" md-waves="color: accent;" class="modal-action modal-close">Disagree</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</template>
